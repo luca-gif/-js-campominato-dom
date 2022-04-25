@@ -1,0 +1,61 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+    height: 100vh;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+
+main {
+    color: red;
+}
+
+.grid {
+    width: 500px;
+    height: 500px;
+    border: 1px solid red;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    color: red;
+}
+
+.cell {
+    border: 1px solid snow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.square100 {
+    width: calc(100% / 10);
+    height: calc(100% /10);
+}
+
+.square81 {
+    width: calc(100% / 9);
+    height: calc(100% /9);
+}
+
+.square49 {
+    width: calc(100% / 7);
+    height: calc(100% /7);
+}
+
+.clicked {
+    background-color: green;
+    color: white;
+}
+
+.bomb {
+    background-color: red;
+    color: black;
+    box-shadow: inset 0 0 5px 5px black;
+    border-radius: 50%;
+    border: 0
+}
