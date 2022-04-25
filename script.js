@@ -1,5 +1,6 @@
 const main = document.querySelector("main");
 const BOMBS_NUM = 16;
+let arrayBombs = [];
 
 document.getElementById("play").addEventListener("click", play);
 
@@ -41,7 +42,6 @@ function generateCell(numCella, valoreLivello) {
 }
 
 function bombGenerator(valoreLivello) {
-    const arrayBombs = [];
     while (arrayBombs.length < BOMBS_NUM) {
         const bomb = getRandomNumber(1, valoreLivello);
         if (!arrayBombs.includes(bomb)) {
@@ -55,7 +55,13 @@ function bombGenerator(valoreLivello) {
 /* Aggiunge il colore al click */
 
 function handleClickCell() {
-    this.classList.toggle("clicked");
+    this.classList.add("clicked");
+    const number = this.innerText;
+
+    if (arrayBombs.includes(number)) {
+        this.classList.add("bomb");
+    }
+    console.log(number);
 }
 
 /* Genera il reset */

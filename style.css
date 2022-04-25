@@ -56,6 +56,4 @@ main {
     background-color: red;
     color: black;
     box-shadow: inset 0 0 5px 5px black;
-    border-radius: 50%;
-    border: 0
 }
